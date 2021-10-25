@@ -37,6 +37,7 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import LineHeight from 'ckeditor5-line-height-plugin/src/lineheight';
 
 import FullScreenMode from './plugin/FullScreenMode';
 
@@ -75,7 +76,8 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	FullScreenMode
+	FullScreenMode,
+	LineHeight,
 ];
 
 // Editor configuration.
@@ -86,6 +88,7 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'fontFamily',
 			'fontSize',
+			'lineHeight',
 			'fontColor',
 			'bold',
 			'italic',
@@ -134,6 +137,9 @@ ClassicEditor.defaultConfig = {
 			'big',
 			'huge'
 		],
+	},
+	lineHeight: {
+		options: [ 0.5, 1, 1.5, 2, 2.5 ]
 	},
 	fontColor: {
 		colors: [
